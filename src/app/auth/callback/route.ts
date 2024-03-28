@@ -12,7 +12,6 @@ export async function GET(request: NextRequest) {
         try {
             const { data, error } = await supabase.auth.exchangeCodeForSession(code)
 
-            console.log('data', data)
             if (error) {
                 console.error(error)
                 return NextResponse.redirect('/auth/sign-in')
