@@ -10,6 +10,9 @@ export async function signUp(values: SignUpFormValues) {
     const {data, error} = await supabase.auth.signUp({
         email: values.email,
         password: values.password,
+        options: {
+            emailRedirectTo: process.env.NEXT_PUBLIC_AUTH_REDIRECT_URL
+        }
     })
 
     console.error(error)

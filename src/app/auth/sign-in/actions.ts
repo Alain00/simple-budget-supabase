@@ -19,13 +19,3 @@ export async function signIn(values: SignInFormValues) {
 
     redirect('/dashboard', RedirectType.replace)
 }
-
-// export async function signInWithGithub() {
-//     const supabase = await supabaseServerClient();
-//     await supabase.auth.signInWithOAuth({
-//         provider: "github",
-//         options: {
-//             redirectTo: "http://localhost:3000/auth/callback",
-//         }
-//     })
-// }
